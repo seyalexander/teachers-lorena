@@ -1,0 +1,37 @@
+<body class="custom-bg flex items-center justify-center">
+  <div class="container flex items-center justify-between max-w-screen-xl mx-auto px-4">
+
+    <div class="logo-container flex-shrink-0 justify-center items-center">
+      <img  src="../../../../../../assets/Talking.png" alt="Logo" class="logo-image w-96 items-center">
+    </div>
+
+    <div class="login-container max-w-md w-full p-6 custom-card-bg rounded-lg shadow-lg">
+        <h1 class="text-3xl font-bold text-center text-accent mb-6">Welcome!</h1>
+
+        <form class="space-y-4" [formGroup]="loginForm">
+            <div>
+                <label for="username" class="block text-lg font-semibold text-primary">Username</label>
+                <input formControlName="username" id="username" name="username" type="text" required class="w-full p-3 mt-2 text-lg border-2 border-accent rounded-md focus:outline-none focus:ring-2 focus:ring-accent">
+            </div>
+            <div>
+                <label for="password" class="block text-lg font-semibold text-primary">Password</label>
+                <input formControlName="password"  id="password" name="password" type="password" required class="w-full p-3 mt-2 text-lg border-2 border-accent rounded-md focus:outline-none focus:ring-2 focus:ring-accent">
+            </div>
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <input  id="remember-me" name="remember-me" type="checkbox" class="h-4 w-4 text-accent focus:ring-accent border-gray-300 rounded">
+                    <label for="remember-me" class="ml-2 block text-sm text-primary">Remember me</label>
+                </div>
+                <div class="text-sm">
+                    <a href="#" class="font-medium text-accent hover:text-primary">Forgot your password?</a>
+                </div>
+            </div>
+            <div>
+                <button type="submit"  (click)="login()" class="w-full py-3 mt-6 bg-accent text-white text-lg font-semibold rounded-md shadow-md hover:bg-primary focus:outline-none focus:ring-2 focus:ring-accent">Login</button>
+            </div>
+        </form>
+
+        <p class="mt-6 text-center text-primary"> Don't have an account? <a href="#" class="text-accent font-medium hover:text-primary">Sign up</a></p>
+    </div>
+  </div>
+</body>

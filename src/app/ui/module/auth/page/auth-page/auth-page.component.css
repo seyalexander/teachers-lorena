@@ -1,0 +1,36 @@
+.custom-bg {
+  background: radial-gradient(circle, #1b004b 20%, #4c007d 60%, #7f00b2 100%);
+  min-height: 100vh;
+}
+.custom-card-bg {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.text-primary {
+  /* color: #1b004b; */
+  color: #fff;
+}
+.text-accent {
+  color: #f988ff;
+}
+.bg-accent {
+  background-color: #7f00b2;
+}
+.focus\:ring-accent:focus {
+  box-shadow: 0 0 0 2px #7f00b2;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  .logo-container {
+    padding-right: 0;
+    margin-bottom: 1rem;
+  }
+  .login-container {
+    margin-left: 0;
+  }
+}

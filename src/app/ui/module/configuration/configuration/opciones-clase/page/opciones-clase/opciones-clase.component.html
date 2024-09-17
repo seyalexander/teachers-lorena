@@ -1,0 +1,55 @@
+
+<body class="bg-gradient-to-r from-purple-900 via-purple-700 to-purple-500  custom-bg min-h-screen flex flex-col items-center py-10 relative">
+
+  <div class="absolute right-0 top-0 h-full w-full flex items-center justify-end md:object-contain ">
+    <div class="avatar-background md:w-full ">
+      <img  src="https://img.freepik.com/foto-gratis/personaje-dibujos-animados-3d_23-2151021922.jpg?t=st=1721966561~exp=1721970161~hmac=5cb656f12016ffd4cd3412f6a0e7a21701bc51621c09a1f91678bc94fc3ef449&w=740" alt="img" class="avatar-image " />
+    </div>
+  </div>
+
+  <div
+    class="absolute top-4 left-4 flex items-center glass-effect p-3 rounded-full shadow-md"
+  >
+    <img
+      [src]="loggedInUser.avatar"
+      alt="User Avatar"
+      class="w-10 h-10 rounded-full mr-3"
+    />
+    <span class="text-lg font-semibold text-white">{{
+      loggedInUser.username
+    }}</span>
+  </div>
+
+  <button
+    (click)="volverHome()"
+    class="absolute top-4 right-4 py-2 px-4 bg-white bg-opacity-30 text-white font-semibold rounded-full shadow-md hover:bg-opacity-50 focus:outline-none focus:ring-2 focus:ring-purple-500 glass-effect"
+  >
+    Back
+  </button>
+
+  <h1 class="m-14 text-center text-4xl font-bold text-yellow-500 mb-10">Choose an activity</h1>
+
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl w-full px-6"
+  >
+    <div
+      (click)="actividadSonidos()"
+      class="rounded-xl cursor-pointer relative z-10 p-6 bg-image flex flex-col justify-end h-64"
+    >
+      <div class="align-center">
+        <h2 class="text-2xl font-bold text-white mb-2 text-center">
+          Vocabulary
+        </h2>
+        <!-- Tags -->
+        <div class="mt-6 flex justify-center space-x-3 text-sm text-gray-300">
+          <span class="bg-purple-500 text-white px-2 py-1 rounded-full"
+            >#Almendra</span
+          >
+          <span class="bg-purple-500 text-white px-2 py-1 rounded-full"
+            >#Cruzado</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
